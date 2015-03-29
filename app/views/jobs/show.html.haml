@@ -4,3 +4,4 @@
 
 = link_to "Home", root_path
 = link_to "Editar", edit_job_path(@job)
+= link_to "Deletar", job_path(@job), method: :delete, data: { confirm: "Você está certo?" }
