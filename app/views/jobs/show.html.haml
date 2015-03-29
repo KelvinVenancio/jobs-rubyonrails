@@ -1,7 +1,10 @@
-%h1= @job.title
-%p= @job.description
-%p= @job.company
-
-= link_to "Home", root_path
-= link_to "Editar", edit_job_path(@job)
-= link_to "Deletar", job_path(@job), method: :delete, data: { confirm: "Você está certo?" }
+#jobs
+	.job
+		%h2= @job.title
+		%p= @job.description
+		%p= @job.company
+		%button.btn.btn-default= link_to "Quero este Job", @job.url
+#links
+	= link_to "Voltar", root_path, class: "btn btn-sm btn-default"
+	= link_to "Editar", edit_job_path(@job), class: "btn btn-sm btn-default"
+	= link_to "Deletar", job_path(@job), method: :delete, data: { confirm: "Você está certo?" }, class: "btn btn-sm btn-default"
